@@ -2,13 +2,14 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import socket
-
+import os
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://avnadmin:AVNS_Pqg0EaCm9QeHSPH5o1j@pg-3983cda9-gamedata.k.aivencloud.com:28641/defaultdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://avnadmin:AVNS_Pqg0EaCm9QeHSPH5o1j@pg-3983cda9-gamedata.k.aivencloud.com:28641/defaultdb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)  # Initialize SQLAlchemy with Flask
