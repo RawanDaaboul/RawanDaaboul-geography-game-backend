@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Game High Scores</h1>
+    <table border="1">
+        <tr>
+            <th>UserID</th>
+            <th>Highscore P</th>
+            <th>Highscore A</th>
+            <th>Highscore GDP</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.userid }}</td>
+            <td>{{ row.highscore_p }}</td>
+            <td>{{ row.highscore_a }}</td>
+            <td>{{ row.highscore_gdp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
