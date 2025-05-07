@@ -1,0 +1,5 @@
+// filepath: c:\Users\User\Desktop\FlaskWebApp\.vscode\settings.json
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+    "python.analysis.typeCheckingMode": "basic"
+}
